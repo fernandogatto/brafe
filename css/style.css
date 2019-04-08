@@ -1,0 +1,558 @@
+/* Reset */
+
+body, h1, h2, h3, h4, p, ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	min-height: 100vh;
+}
+
+body, footer {
+	font-family: Georgia, serif;
+	color: #252525;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.clear:after, .clear:before {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*
+1. Navbar
+2. Section Chamada
+3. Section Sobre
+4. Section Produtos
+5. Section Unidades
+6. Section Assinatura
+7. Rodapé
+8. Section 404
+*/
+
+/* 1. Navbar */
+
+nav {
+	background-color: #252525;
+	padding: 20px 0;
+}
+
+nav ul {
+	float: right;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.125em;
+}
+
+nav ul li {
+	display: inline-block;
+	margin: 10px;
+}
+
+nav ul li:after {
+	content: "";
+	display: block;
+	background-color: #fff;
+	height: 5px;
+	width: 0;
+	transition: 0.3s;
+}
+
+nav ul li:hover:after {
+	width: 100%;
+}
+
+/* Definições responsivas */
+
+@media (max-width: 1000px) {
+	nav img {
+		margin-left: 5px;
+	}
+
+	nav ul {
+		margin-right: 5px;
+	}
+}
+
+@media (max-width: 740px) {
+	nav {
+		text-align: center;
+	}
+
+	nav ul {
+		float: none;
+	}
+}
+
+/* 2. Section Chamada */
+
+#chamada {
+	background: url("../img/bg-intro.jpg") no-repeat center center;
+	background-size: cover;
+	padding: 130px 0;
+}
+
+#chamada h1, #chamada h5 {
+	color: #fff;
+	text-align: center;
+}
+
+#chamada h1 {
+	font-size: 3em;
+	text-transform: uppercase;
+}
+
+#chamada h5 {
+	font-size: 1.125em;
+	font-style: italic;
+}
+
+#chamada h1::after {
+	width: 20px;
+	height: 4px;
+	background-color: #fff;
+	content: "";
+	display: block;
+	margin: 0 auto;
+}
+
+/* Definições responsivas */
+
+@media (max-width: 740px) {
+	#chamada .container {
+		max-width: 600px;
+	}
+
+	#chamada {
+		padding: 60px 0;
+	}
+}
+
+/* 3. Section Sobre */
+
+#sobre {
+	padding: 60px 0;
+}
+
+#sobre h2 {
+	font-size: 2.25em;
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+#sobre p {
+	font-size: 1.125em;
+	line-height: 1.4em;
+	font-style: italic;
+	max-width: 460px;
+	text-align: center;
+	margin: 20px auto;
+}
+
+#sobre img {
+	display: block;
+    max-width: 100%;
+}
+
+#sobre .sobre-item {
+	float: left;
+	margin: 0 10px;
+	width: 460px;
+}
+
+#sobre .sobre-item h3 {
+	background-color: #252525;
+	color: #fff;
+	text-align: center;
+	width: 220px;
+	font-size: 2.25em;
+	line-height: 1em;
+	padding: 5px 0 10px 0;
+	text-transform: lowercase;
+	font-style: italic;
+	position: relative;
+	top: -25px;
+	font-weight: normal; 
+}
+
+#sobre .sobre-item img {
+	box-shadow: 10px 10px 10px #cecece;
+}
+
+/* Definições responsivas */
+
+@media (max-width: 980px) {
+	#sobre .container {
+		width: 720px;
+	}
+
+	#sobre .sobre-item {
+		width: 340px;
+	}
+}
+
+@media (max-width: 740px) {
+	#sobre .container {
+		max-width: 300px;
+	}
+
+	#sobre .sobre-item {
+		width: 300px;
+		margin: 0 auto;
+	}
+}
+
+/* 4. Section Produtos */
+
+#produtos {
+	background-color: #e7e4d8;
+	border-top: 3px solid #d6d3c8;
+    border-bottom: 3px solid #d6d3c8;
+    padding: 50px 0;
+}
+
+#produtos .produtos-item {
+	width: 300px;
+	float: left;
+	margin: 0 10px 20px 10px;
+	text-align: center;
+}
+
+#produtos .produtos-item h2 {
+	font-size: 2.25em;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#produtos .produtos-item p {
+	font-size: 0.875em;
+	line-height: 1.4em;
+}
+
+#produtos .produtos-item h2::before {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	content: "";
+	display: block;
+	border-radius: 50%;
+	margin: 20px auto;
+	border: 5px solid #e7e4d8;
+	box-shadow: 0 0 0 5px red;
+}
+
+#produtos .produtos-item #cafe-paulista::before {
+	background-color: #492901;
+	box-shadow: 0 0 0 5px #492901;
+}
+
+#produtos .produtos-item #cafe-carioca::before {
+	background-color: #c17139;
+	box-shadow: 0 0 0 5px #c17139;
+}
+
+#produtos .produtos-item #cafe-mineiro::before {
+	background-color: #d7a54d;
+	box-shadow: 0 0 0 5px #d7a54d;
+}
+
+#produtos a {
+	text-decoration: none;
+	color: #252525;
+	font-size: 1.125em;
+	border: 3px solid #252525;
+	padding: 15px 0;
+	width: 180px;
+	display: block;
+	margin: 20px auto 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#produtos a:hover {
+	background-color: #252525;
+	color: #fff;
+	transition: 0.3s;
+}
+
+/* Definições responsivas */
+
+@media (max-width: 960px) {
+	#produtos .container {
+		max-width: 720px;
+	}
+
+	#produtos .produtos-item {
+		width: 220px;
+	}
+}
+
+@media (max-width: 740px) {
+	#produtos .container {
+		max-width: 300px;
+	}
+
+	#produtos .produtos-item {
+		float: none;
+		margin: 0 auto;
+	}
+}
+
+/* 5. Section Unidades */
+
+#unidades {
+	padding: 20px 0;
+}
+
+#unidades .unidades-tipo {
+	margin: 60px 0;
+}
+
+#unidades .unidades-tipo img {
+	float: left;
+	margin: 0 10px;
+	display: block;
+	width: 460px;
+}
+
+#unidades .unidades-tipo .unidade {
+	float: left;
+	margin: 0 10px;
+	width: 460px;
+}
+
+#unidades .unidades-tipo .unidade h2 {
+	font-size: 2.25em;
+    margin-bottom: 20px;
+}
+
+#unidades .unidades-tipo .unidade p {
+	font-size: 1.125em;
+    line-height: 1.4em;
+    margin-bottom: 40px;
+    max-width: 320px;
+}
+
+#unidades .unidades-tipo .unidade a {
+	text-decoration: none;
+	color: #252525;
+	font-size: 1.125em;
+	border: 3px solid #252525;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+#unidades .unidades-tipo .unidade a:hover {
+	background-color: #252525;
+	color: #fff;
+}
+
+/* Definições responsivas */
+
+@media (max-width: 980px) {
+	#unidades .container {
+		max-width: 720px;
+	}
+
+	#unidades .unidades-tipo img, #unidades .unidades-tipo .unidade {
+		width: 340px;
+	}
+}
+
+@media (max-width: 740px) {
+	#unidades .container {
+		max-width: 300px;
+	}
+
+	#unidades .unidades-tipo img, #unidades .unidades-tipo .unidade {
+		margin: 0;
+		width: 300px
+	}
+}
+
+/* 6. Section Assinatura */
+
+#assinatura {
+	background: #e7e4d8;
+    padding: 30px 0;
+}
+
+#assinatura #assinatura-msg {
+	width: 460px;
+    margin: 0 10px;
+    float: left;
+}
+
+#assinatura #assinatura-msg h2 {
+	font-size: 2.25em;
+}
+
+#assinatura #assinatura-msg p {
+	font-size: 1.5em;
+    font-style: italic;
+}
+
+#assinatura form {
+	float: left;
+	width: 470px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#assinatura form label {
+	display: none;
+}
+
+#assinatura input {
+	background-color: transparent;
+	border: 3px solid #252525;
+	font-size: 1.5em;
+	font-style: italic;
+	font-family: Georgia, serif; 
+	padding: 10px; 
+	margin-right: -4px;
+	width: 320px;
+}
+
+#assinatura button {
+	background-color: #252525;
+	border: none;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	font-family: Georgia, serif;
+	padding: 13px 10px;
+	cursor: pointer;
+}
+
+/* Definições responsivas */
+
+@media (max-width: 980px) {
+	#assinatura .container {
+		max-width: 720px;
+	}
+
+	#assinatura #assinatura-msg, #assinatura form {
+		width: 340px;
+	}
+}
+
+@media (max-width: 740px) {
+	#assinatura .container {
+		max-width: 300px;
+	}
+
+	#assinatura #assinatura-msg {
+		width: 300px;
+		margin: 0;
+	}
+
+	#assinatura form {
+		width: 300px;
+		float: none;
+		margin: 0;
+	}
+
+	#assinatura form input {
+		width: 300px;
+		margin-top: 10px;
+	}
+}
+
+/* 7. Rodapé */
+
+footer {
+	background: #d6d3c8;
+    padding: 40px 0;
+}
+
+footer p {
+	font-size: 1.125em;
+    line-height: 1.4em;
+    max-width: 480px;
+    float: left;
+    margin-left: 10px;
+}
+
+footer img {
+	float: right;
+	margin-right: 10px;
+}
+
+/* Definições responsivas */
+
+@media (max-width: 740px) {
+	footer .container {
+		max-width: 300px;	
+	}
+
+	footer p {
+		float: none;
+		margin: 0;
+	}
+
+	footer img {
+		float: none;
+		margin: 20px auto;
+	}
+}
+
+/* 8. Section 404 */
+
+#pagina-404 {
+	background: url("../img/bg-404.jpeg") no-repeat center center;
+	background-size: cover;
+	text-align: center;
+	height: calc(100vh - 77px - 130px);
+}
+
+#pagina-404 h2 {
+	font-size: 4em;
+	color: #fff;
+	padding-top: 100px;
+	text-shadow: 2px 2px 2px #252525;
+}
+
+#pagina-404 h3 {
+	font-size: 2.25em;
+	color: #fff;
+	text-shadow: 2px 2px 2px #252525;
+}
+
+#pagina-404 a {
+	text-decoration: none;
+	color: #252525;
+	padding: 13px 10px;
+	margin-top: 50px;
+	font-size: 1.5em;
+	border: 3px solid #252525;
+	font-weight: bold;
+	transition: 0.3s;
+	display: inline-block;
+}
+
+#pagina-404 a:hover {
+	background-color: #252525;
+	color: #fff;
+	border-color: #252525;
+}
+
+/* Definições responsivas */
+
+@media (max-width: 425px) {
+	#pagina-404 a {
+		margin-top: 25px;
+	}
+}
